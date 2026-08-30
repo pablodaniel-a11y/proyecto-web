@@ -15,39 +15,51 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             header("Location: pag1.php?seccion=matfin");
             exit();
         }
-
-        $stmt = mysqli_prepare($conn, "INSERT INTO materias (nombre_materia, fecha, id_estado) VALUES (?, ?, ?)");
+        $stmt = $conn->prepare("INSERT INTO materias (nombre_materia, fecha, id_estado) VALUES (?, ?, ?)");
+        //$stmt = mysqli_prepare($conn, "INSERT INTO materias (nombre_materia, fecha, id_estado) VALUES (?, ?, ?)");
         if ($stmt) {
-            mysqli_stmt_bind_param($stmt, "ssi", $nombre_materia, $fecha, $estado);
-            if (mysqli_stmt_execute($stmt)) {
+            $stmt->bind_param("ssi", $nombre_materia, $fecha, $estado);
+            //mysqli_stmt_bind_param($stmt, "ssi", $nombre_materia, $fecha, $estado);
+            if (
+                $stmt->execute()
+                //mysqli_stmt_execute($stmt)
+                ) {
                 $_SESSION['mensaje'] = "Materia agregada exitosamente";
                 header("Location: pag1.php?seccion=matfin");
                 exit();
             } else {
-                echo "  Error al guardar: " . mysqli_stmt_error($stmt);
+                echo "  Error al guardar: " . $stmt->error;//mysqli_stmt_error($stmt);
             }
-            mysqli_stmt_close($stmt);
+            $stmt->close();
+            //mysqli_stmt_close($stmt);
         }
     }else{
         if($accion === 'Eliminar'){
             $id_mat = intval($_POST['id_materia'] ?? 0);
 
             if($id_mat > 0){
-                $stmt = mysqli_prepare($conn, "DELETE FROM materias WHERE id_materia = ?");
+                $stmt = $conn->prepare("DELETE FROM materias WHERE id_materia = ?");
+                // $stmt = mysqli_prepare($conn, "DELETE FROM materias WHERE id_materia = ?");
                 if ($stmt) {
-                    mysqli_stmt_bind_param($stmt, "i", $id_mat);
-                    if (mysqli_stmt_execute($stmt)) {
+                    $stmt->bind_param("i", $id_mat);
+                    //mysqli_stmt_bind_param($stmt, "i", $id_mat);
+                    if (
+                        $stmt->execute()
+                        //mysqli_stmt_execute($stmt)
+                        ) {
                         $_SESSION['mensaje'] = "Materia eliminada correctamente";
                         header("Location: pag1.php?seccion=matfin");
                         exit();
                     } else {
-                        echo "  Error al eliminar: " . mysqli_stmt_error($stmt);
+                        echo "  Error al eliminar: " . $stmt->error; //mysqli_stmt_error($stmt);
                     }
-                    mysqli_stmt_close($stmt);
+                    $stmt->close();
+                    //mysqli_stmt_close($stmt);
                 }
             }
         }
     }
 }
-mysqli_close($conn);
+$conn->close();
+//mysqli_close($conn);
 ?>

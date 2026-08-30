@@ -2,7 +2,7 @@ header {
     text-align: center;
     padding: 5px;
     background-color: rgba(39, 132, 160, 0.897);
-    background-image: url("img/logo.png");
+    background-image: url("../img/logo.png");
     background-size: 430px;
     background-repeat: no-repeat;
     background-position: left top;
@@ -96,6 +96,10 @@ article.art2{
     border-radius: 6px;
 }
 
+.text-escudo-unsa{
+    padding-left: 10px;
+}
+
 
 form{
     padding: 5px;
@@ -112,4 +116,11 @@ span{
 article.facultad_exact h3 span{
     color: black;
     text-shadow: 3px 5px 5px darkturquoise;
+}
+
+.tablatup {
+    font-size: 13px;
+}
+.tablatup th,.tablatup td{
+    padding: 10px 20px;
 }

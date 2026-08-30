@@ -19,29 +19,35 @@ require_once "header.php"
             <br> San Ramon de la Nueva Oran, Rosario de la Frontera y San Jose de Metan. 
         </p>
         <p><a target="_blank" href="https://www.unsa.edu.ar/la-universidad/"> Link de la Unsa</a></p>
+    </article>
+    <div class="text-escudo-unsa">
         <p>
-            El Diseño del Escudo de la UNSa es obra del escritor y reconocido artista plastico Osvaldo JUANE (1928-1988),  
+              El Diseño del Escudo de la UNSa es obra del escritor y reconocido artista plastico Osvaldo JUANE (1928-1988),  
             cuya obra esta plasmada en viviendas particulares, en publicaciones y colecciones de proyeccion nacional e internacional.
             Como Coordinador del Taller de Plastica del Servicio de Accion Cultural de esta Universidad, el Rector Normalizador Holver Martinez Borelli, 
             le encomendo diseñar el escudo y el 8 de julio de 1974 su propuesta, fue adoptada como Escudo Oficial de la Universidad Nacional de Salta,  
-            a traves de la Resolucion Nº 483/74. En este documento se destaca que: "configura una obra que, con sus relevantes valores plasticos, 
+            a traves de la Resolucion Nº 483/74.
+        </p>
+        <p>En este documento se destaca que: "configura una obra que, con sus relevantes valores plasticos, 
             representa el ambito natural de la Universidad Nacional de Salta y asume graficamente las resonancias del paisaje centro-sudamericano, 
             complementandose armoniosamente con el lema, incluido en su composicion"… "contando asi con los elementos esenciales que nuestra comunidad aspira a plasmar en el Escudo de esta Casa".
-            El diseño incluye el lema: "MI SABIDURIA VIENE DE ESTA TIERRA", autoria de los escritores salteños Manuel J. Castilla y Holver Martinez Borelli. 
+        </p>
+        <p>El diseño incluye el lema: "MI SABIDURIA VIENE DE ESTA TIERRA", autoria de los escritores salteños Manuel J. Castilla y Holver Martinez Borelli. 
             La vigencia de esta obra, acompaño los procesos que vividos por el pais y por la misma Universidad. 
             Asi, durante el periodo 1975-1986, se suspendio su uso y su restablecimiento se efectuo durante la gestion del Rector Juan Carlos Gottifredi, como reflejo de los ideales que consagra la creación de la Universidad y su Estatuto.
             En el año 2005, el artista Osvaldo JUANE fue declarado Doctor Honoris Causa de esta Universidad.
         </p>
-    </article>
-
+    </div>
     <?php
         break;
         case 'perfil':
     ?>
     <article id="pb">
             <h3>Perfil Basico</h3>
-            <p> Hola mi nombre es pablo, soy un estudiante de la facultad de ciencias exactas de la carrera "Tecnicatura Universitaria en Programacion (TUP)".
-                <br> Este seria la primera vez que realmente realizo un activadad con html por lo tanto puede haber errores en esta pagina
+            <p> 
+                Hola mi nombre es pablo, soy un estudiante de la facultad de ciencias exactas de la carrera "Tecnicatura Universitaria en Programacion (TUP)".
+                <br> Este seria la primera vez que realmente realizo un activadad con html por lo tanto puede haber errores en esta pagina, pero espero poder aprender 
+                <br> la mayoria del contenido que se presente durante la cursada, como PHP o JavaScript entre varios otros temas que se enseñen.
             </p>
     </article>
 
@@ -130,28 +136,182 @@ require_once "header.php"
     <article>
         <h1>Tecnicatura Universitaria en Programación <h1>
         <h2>Título que otorga: Técnico Universitario en Programación<h2>
-        <h2>Duración: 3 Años Cantidad de Materias: 17 <h2>
-        <table>
+        <h2>Duración: 3 Años | Cantidad de Materias: 17 <h2>
+        <table class="tablatup">
             <thead>
                 <tr>
-                    <th>año</th>
-                    <th>Cuat.</th>
-                    <th>Materia</th>
-                    <th>Cursar</th>
+                    <th rowspan="2">año</th>
+                    <th rowspan="2">Cuat.</th>
+                    <th rowspan="2">Materia</th>
+                    <th colspan="2">Cursar</th>
+                    <th>Rendir</th>
                     <tr>
                         <th>Regular</th>
                         <th>Aprobado</th>
-                    </tr>
-                    <th>Rendir</th>
-                    <tr>
                         <th>Aprobado</th>
                     </tr>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>1°</td>
-                    <td>I</td>
+                    <td rowspan="5">1°</td>
+                    <td rowspan="2">I</td>
+                    <td>Elementos de Programacion</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                </tr>
+                <tr>
+                    <td>Matematica para informatica</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                </tr>
+                <tr>
+                    <td rowspan="3">II</td>
+                    <td>Analisis Matematico I</td>
+                    <td>Matematica para informatica</td>
+                    <td>---</td>
+                    <td>Matematica para informatica</td>
+                </tr>
+                <tr>
+                    <td>Algebra Lineal y Geometrica Analitica</td>
+                    <td>Matematica para informatica</td>
+                    <td>---</td>
+                    <td>Matematica para informatica</td>
+                </tr>
+                <tr>
+                    <td>Programacion</td>
+                    <td>Elementos de Programacion</td>
+                    <td>---</td>
+                    <td>Elementos de Programacion</td>
+                </tr>
+                <tr>
+                    <td rowspan="6">2°</td>
+                    <td rowspan="3">I</td>
+                    <td>Sistemas de Computacion</td>
+                    <td>Programacion</td>
+                    <td>Elemento de Programacion</td>
+                    <td>Programacion</td>
+                </tr>
+                <tr>
+                    <td>Algoritmo y Estructura de Datos</td>
+                    <td>
+                        <ul>
+                            <li>Analisis Matematico I</li>
+                            <li>Programacion</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Elementos de Programacion</li>
+                            <li>Matematica para informatica</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Analisis Matematico I</li>
+                            <li>Programacion</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Programacion Orientada a Objetos</td>
+                    <td>Programacion</td>
+                    <td>Elementos de Programacion</td>
+                    <td>Programacion</td>
+                </tr>
+                <tr>
+                    <td rowspan="3">II</td>
+                    <td>Programacion Numerica</td>
+                    <td>
+                        <ul>
+                            <li>Analisis Matematico I</li>
+                            <li>Algebra Lineal y Geometrica Analitica</li>
+                            <li>Programacion</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Elementos de Programacion</li>
+                            <li>Matematica para informatica</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Analisis Matematico I</li>
+                            <li>Algebra Lineal y Geometrica Analitica</li>
+                            <li>Programacion</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Paradigmas y Lenguajes</td>
+                    <td>
+                        <ul>
+                            <li>Algoritmo y Estructura de Datos</li>
+                            <li>Programacion Orientada a Objetos</li>
+                        </ul>
+                    </td>
+                    <td>Programacion</td>
+                    <td>
+                        <ul>
+                            <li>Algoritmo y Estructura de Datos</li>
+                            <li>Programacion Orientada a Objetos</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Optativa I</td>
+                    <td colspan="3">Segun Correlativas Propuestas</td>
+                </tr>
+                <tr>
+                    <td rowspan="6">3°</td>
+                    <td rowspan="3">I</td>
+                    <td>Probabilidades y Estadistica</td>
+                    <td>---</td>
+                    <td>
+                        <ul>
+                            <li>Analisis Matematico I</li>
+                            <li>Algebra Lineal y Geometrica Analitica</li>
+                        </ul>
+                    </td>
+                    <td>---</td>
+                </tr>
+                <tr>
+                    <td>Bases de Datos</td>
+                    <td>Programacion Numerica</td>
+                    <td>Sistemas de Computacion</td>
+                    <td>Programacion Numerica</td>
+                </tr>
+                <tr>
+                    <td>Optativa II</td>
+                    <td colspan="3">Segun Correlativas Propuestas</td>
+                </tr>
+                <td rowspan="3">II</td>
+                    <td>Programacion de Aplicaciones Web</td>
+                    <td>
+                        <ul>
+                            <li>Paradigmas y Lenguajes</li>
+                            <li>Bases de datos</li>
+                        </ul>
+                    </td>
+                    <td>Algoritmo y Estructura de Datos</td>
+                    <td>
+                        <ul>
+                            <li>Paradigmas y Lenguajes</li>
+                            <li>Bases de datos</li>
+                        </ul>
+                    </td>
+                <tr>
+                    <td>Optativa III</td>
+                    <td colspan="3">Segun Correlativas Propuestas</td>
+                </tr>
+                <tr>
+                    <td>Seminario Tecnico Profecional</td>
+                    <td>Bases de Datos</td>
+                    <td>Programacion Orientada a Objetos</td>
+                    <td>Todas las Asignaturas</td>
                 </tr>
             </tbody>
         </table>

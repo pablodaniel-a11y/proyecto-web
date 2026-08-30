@@ -39,3 +39,7 @@ button{
 section,footer{
     margin: 8px;
 }
+
+p {
+  text-indent: 10px;
+}

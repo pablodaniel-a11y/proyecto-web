@@ -1,3 +1,11 @@
+.formulario_tabla {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
 article.formulario_tabla h2{
     margin: 0px;
     padding-top: 8px;
@@ -23,5 +31,32 @@ article.formulario_tabla div.contiene_titulo{
 
 article.tabla_fin{
     margin-top: 15px;
-    
+    padding-left: 10px;
+}
+
+.bto_eliminar{
+    margin: 0;
+    padding: 0;
+    width: 70px;
+}
+
+.botoness{
+    text-align: center;
+    vertical-align: middle;
+}
+
+.botoness .bto_eliminar{
+    display: inline-block;
+    text-align: left;
+}
+
+.mensaje_exitoso{
+    background-color: #d4e2ed; 
+    color: #143a53; 
+    padding: 10px 15px; 
+    border-radius: 4px; 
+    margin-top: 10px; 
+    margin-bottom: 15px; 
+    border: 1px solid #c3d5e6;
+    font-size: 20px;
 }

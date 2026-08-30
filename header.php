@@ -28,9 +28,8 @@
                 </div>
             </li>
             <li class="downopc">
-                <a class="downref"> Materias </a>
+                <a href="index.php?seccion=tup" class="downref"> Materias </a>
                 <div class="dropdown-content">
-                    <a href="pag1.php?seccion=matcurz"> Materias Cursando </a>
                     <a href="pag1.php?seccion=matfin"> Materias a Finalizadas</a>
                 </div>
             </li>

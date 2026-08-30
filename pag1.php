@@ -1,6 +1,7 @@
 <?php 
 session_start();
 require_once 'header.php';
+
 ?>
 
     <?php
@@ -35,7 +36,7 @@ require_once 'header.php';
         </form>
         
         <?php if (isset($_SESSION['mensaje'])): ?>
-            <div class="mensaje_exito" style="background-color: #d4edda; color: #155724; padding: 10px 15px; border-radius: 4px; margin-bottom: 15px; border: 1px solid #c3e6cb;">
+            <div class="mensaje_exitoso">
                 <?php 
                     echo htmlspecialchars($_SESSION['mensaje']); 
                     unset($_SESSION['mensaje']);
@@ -68,8 +69,8 @@ require_once 'header.php';
                             <td><?php echo htmlspecialchars($row['nombre_materia']); ?> </td>
                             <td><?php echo htmlspecialchars($row['fecha']); ?></td>
                             <td><?php echo htmlspecialchars($texto_estado); ?></td>
-                            <td>
-                                <form action="finalizar_materia.php" method="POST" onsubmit="return confirm('Esta seguro de eliminar esta materia?');">
+                            <td class="botoness">
+                                <form class="bto_eliminar" action="finalizar_materia.php" method="POST" onsubmit="return confirm('Esta seguro de eliminar esta materia?');">
                                     <input type="hidden" name="id_materia" value="<?php echo (int)$row['id_materia']; ?>">
                                     <button type="submit" name="accion" value="Eliminar" class="boton_eliminar">Eliminar</button>
                                 </form>
@@ -84,51 +85,6 @@ require_once 'header.php';
                     ?>
                 </tbody>
             </table>
-    </article>
-    <?php
-        break;
-        case 'matcurz':
-    ?>
-
-    <article class="formulario_tabla">
-        <h2>Materias Cursando</h2>
-        <div class="contiene_titulo">
-            <h3>Modificar Tabla: </h3>
-            <p> 
-            Se puede completar los datos para realizar una modificacion de la tabla, 
-            ya sea Agregar o Eliminar una materia, se realizara la actualizacion en la pagina.
-            </p>
-        </div>
-        <form>
-        </form>
-    </article>
-    <article>
-        <table id="prueba">
-            <thead>
-                <tr>
-                    <th>Materia</th>
-                    <th>Fecha inicio</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Programacion Numerica</td>
-                    <td>12/12/2025</td>
-                </tr>
-                <tr>
-                    <td>Probabilidad y Estadistica</td>
-                    <td>12/12/2026</td>
-                </tr>
-                <tr>
-                    <td>Programacion Numerica</td>
-                    <td>12/12/2025</td>
-                </tr>
-                <tr>
-                    <td>Programacion Numerica</td>
-                    <td>12/12/2025</td>
-                </tr>
-            </tbody>
-        </table>
     </article>
     <?php
         break;
