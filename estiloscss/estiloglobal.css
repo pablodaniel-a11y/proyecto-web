@@ -1,0 +1,41 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(226, 208, 176, 0.5);
+    /*background-image: url("img/perro.png");
+    background-size: 200px 200px;
+    background-repeat: no-repeat;
+    background-position: right top;
+    */
+}
+
+table,th,td {
+    border: 2px outset rgb(47, 211, 223);
+    border-collapse: collapse;
+    width: 500px;
+    padding: 5px;
+    text-align: center;
+}
+th{
+    background-color: rgba(128, 128, 128, 0.315);
+}
+table tbody tr:hover{
+    background-color: rgba(0, 0, 0, 0.089);
+    cursor: default;
+}
+
+a:visited{
+    color: black;
+}
+a:hover{
+    color: blue;
+    cursor: pointer;
+}
+
+button{
+    cursor: pointer;
+}
+
+section,footer{
+    margin: 8px;
+}

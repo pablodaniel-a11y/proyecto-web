@@ -1,0 +1,115 @@
+header {
+    text-align: center;
+    padding: 5px;
+    background-color: rgba(39, 132, 160, 0.897);
+    background-image: url("img/logo.png");
+    background-size: 430px;
+    background-repeat: no-repeat;
+    background-position: left top;
+    font-family: Century;
+}
+
+header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    left: 0;
+    width: 100%;
+    background-color: rgba(39, 132, 160, 0.932);
+    /* border: 2px solid rgba(0, 0, 0, 0.219); */
+}
+header li {
+    float: left;
+    border-right:2px solid rgb(226, 208, 176, 0.5);
+}
+header li a{
+    display: block;
+    padding: 14px 16px;
+    text-align: center;
+    text-decoration: none;
+}
+header li a, .downref{
+	display: inline-block;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+header li a:hover, .dropdown:hover .downref{
+    background-color: rgb(226, 208, 176, 0.5);
+    border-top:5px solid black;
+}
+header li.downopc {
+	display: inline-block;
+}
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #73d1dbce;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+}
+.dropdown-content a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+}
+.downopc:hover .dropdown-content {
+	display: block;
+}
+
+
+#Titulo{
+    text-shadow: 3px 5px 5px darkturquoise;
+    color:white;
+    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+    font-family: Century;
+}
+header h2{
+    text-shadow: 3px 5px 5px darkturquoise;
+    color: white;
+    font-family: century;
+}
+
+
+img.imgunsa {
+    width: 400px;
+    /*
+    display: block; 
+    margin-left: auto;
+    margin-right: auto;
+    dado que luego en article.art2 ponemos todo en el centro, no es necesario esto
+    */
+}
+
+
+article.art2{
+    width: 700px;
+    margin: 0 auto;
+    padding: 5px;
+    text-align: center;
+    border-style: dotted;
+    border-color: black;
+    border-radius: 6px;
+}
+
+
+form{
+    padding: 5px;
+    width: 400px;
+    border: 2px outset rgb(47, 211, 223);
+    background-color: rgb(226, 208, 176, 0.5);
+}
+
+span{
+    color: blue;
+    text-decoration: underline;
+}
+
+article.facultad_exact h3 span{
+    color: black;
+    text-shadow: 3px 5px 5px darkturquoise;
+}

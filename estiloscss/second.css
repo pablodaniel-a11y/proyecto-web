@@ -1,0 +1,27 @@
+article.formulario_tabla h2{
+    margin: 0px;
+    padding-top: 8px;
+}
+
+article.formulario_tabla div.contiene_titulo{
+    font-family: Century;
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+}
+
+.formulario_tabla form{
+    padding: 5px;
+    width: 400px;
+    border: 2px outset rgb(47, 211, 223);
+    background-color: rgb(226, 208, 176, 0.5);
+}
+.formulario_tabla form label,input,button{
+    padding: 5px;
+    margin: 3px;
+}
+
+article.tabla_fin{
+    margin-top: 15px;
+    
+}
