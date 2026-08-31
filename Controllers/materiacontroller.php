@@ -44,6 +44,24 @@ class materiacontroller{
         }
     }
 
+    public function actualizar(){
+        if($_SERVER["REQUEST_METHOD"] == "POST"){
+            $id_materia = intval($_POST['id_materia'] ?? 0);
+            $nombre_materia = trim($_POST['nom_mat'] ?? "");
+            $fecha = trim($_POST['fech_mat'] ?? "");
+            $estado = intval($_POST['est_mat'] ?? 0);
+
+            if($nombre_materia !== "" && $fecha !== "" && $id_materia > 0){
+                $this->materiamodel->update($id_materia, $nombre_materia, $fecha, $estado);
+                $_SESSION['mensaje'] = "Materia actualizada correctamente";
+            } else {
+                $_SESSION['mensaje'] = "Error al actualizar los datos";
+            }
+            header("Location: index.php?seccion=matfin");
+            exit();
+        }
+    }
+
     public function secciones(){
         $seccion = $_GET['seccion'] ?? 'unsa';
         require_once __DIR__ . "/../Views/Layout/header.php";
@@ -70,6 +88,11 @@ class materiacontroller{
             case 'matfin':
                 $materias=$this->materiamodel->getAll();
                 require_once __DIR__ . "/../Views/Materias/index.php";
+                break;
+            case 'editar':
+                $id = intval($_GET['id'] ?? 0);
+                $materia=$this->materiamodel->getById($id);
+                require_once __DIR__ . "/../Views/Materias/edit.php";
                 break;
             default:
                 echo "<p>Página no encontrada.</p>";

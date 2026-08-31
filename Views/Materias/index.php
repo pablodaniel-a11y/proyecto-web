@@ -39,6 +39,7 @@
                 <th>Materia</th>
                 <th>Fecha Curzado</th>
                 <th>Estado</th>
+                <th>Editar</th>
                 <th>Eliminar</th>
             </tr>
         </thead>
@@ -55,6 +56,7 @@
                 <td><?php echo htmlspecialchars($row['nombre_materia']); ?> </td>
                 <td><?php echo htmlspecialchars($row['fecha']); ?></td>
                 <td><?php echo htmlspecialchars($texto_estado); ?></td>
+                <td class="botoness"><a href="index.php?seccion=editar&id=<?php echo (int)$row['id_materia'];?>" class="boton_editar">Editar</a></td>
                 <td class="botoness">
                     <form class="bto_eliminar" action="../Public/index.php?accion=eliminar" method="POST" onsubmit="return confirm('Esta seguro de eliminar esta materia?');">
                         <input type="hidden" name="id_materia" value="<?php echo (int)$row['id_materia']; ?>">
