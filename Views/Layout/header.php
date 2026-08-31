@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil personal</title>
-    <link rel="stylesheet" href="estiloscss/estiloglobal.css"/>
-    <link rel="stylesheet" href="estiloscss/first.css"/>
-    <link rel="stylesheet" href="estiloscss/second.css"/>
+    <link rel="stylesheet" href="../estiloscss/estiloglobal.css"/>
+    <link rel="stylesheet" href="../estiloscss/first.css"/>
+    <link rel="stylesheet" href="../estiloscss/second.css"/>
 </head>
 <body>
     <header>
