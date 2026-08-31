@@ -4,9 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil personal</title>
+    <link rel="stylesheet" href="/proyecto/estiloscss/estiloglobal.css"/>
+    <link rel="stylesheet" href="/proyecto/estiloscss/first.css"/>
+    <link rel="stylesheet" href="/proyecto/estiloscss/second.css"/>
+    <!-- 
     <link rel="stylesheet" href="../estiloscss/estiloglobal.css"/>
     <link rel="stylesheet" href="../estiloscss/first.css"/>
     <link rel="stylesheet" href="../estiloscss/second.css"/>
+    -->
 </head>
 <body>
     <header>
@@ -30,7 +35,7 @@
             <li class="downopc">
                 <a href="index.php?seccion=tup" class="downref"> Materias </a>
                 <div class="dropdown-content">
-                    <a href="pag1.php?seccion=matfin"> Materias a Finalizadas</a>
+                    <a href="index.php?seccion=matfin"> Materias a Finalizadas</a>
                 </div>
             </li>
         </ul>

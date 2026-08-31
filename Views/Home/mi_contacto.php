@@ -2,7 +2,7 @@
     <h3> Enviar Mensaje</h3>
     <p> Puedes hablerme en <span>pp159723@gmail.com</span> para comunicarnos </p>
     <br>
-    <form action="../public/index.php?action=enviarcontacto" method="post">
+    <form action="../public/index.php?accion=enviarcontacto" method="post">
         <label for="nombre"> Nombre: </label>
         <input type="text" id="nombre" name="nombre" placeholder="Ingresar Nombre" />
         <br><label for="apellido"> Apellido: </label>
@@ -14,4 +14,12 @@
         <br><button type="submit"> Enviar Mensaje</button>
         <button type="reset"> Borrar Mensaje</button>
     </form>
+    <?php if (isset($_SESSION['mensaje'])): ?>
+        <div class="mensaje_exitoso">
+            <?php 
+                echo htmlspecialchars($_SESSION['mensaje']); 
+                unset($_SESSION['mensaje']);
+            ?>
+        </div>
+    <?php endif; ?>
 </article>

@@ -14,7 +14,7 @@ class materiacontroller{
     }
 
     public function guardar(){
-        session_start(); //fue mi caso por el mensaje
+        // session_start();
         if($_SERVER["REQUEST_METHOD"] == "POST"){
             $nombre_materia=trim($_POST['nom_mat'] ?? "");
             $fecha=trim($_POST['fech_mat'] ?? "");
@@ -26,20 +26,20 @@ class materiacontroller{
                 $this->materiamodel->create($nombre_materia,$fecha,$estado);
                 $_SESSION['mensaje'] = "Materia agregada exitosamente";
             }
-            header("Location: index.php?action=index"); //aca tengo que agregar la direccion despues de hacer las correcciones de index y pag1
+            header("Location: index.php?seccion=matfin");
             exit();
         }
     }
 
     public function eliminar(){
-        session_start();
+        // session_start();
         if($_SERVER["REQUEST_METHOD"] == "POST"){
             $id_mat = intval($_POST['id_materia'] ?? 0);
             if($id_mat > 0){
-                $this->materiaModel->delete($id_mat);
+                $this->materiamodel->delete($id_mat);
                 $_SESSION['mensaje'] = "Materia eliminada correctamente";
             }
-            header("Location: index.php?action=index");
+            header("Location: index.php?seccion=matfin");
             exit();
         }
     }
@@ -47,6 +47,7 @@ class materiacontroller{
     public function secciones(){
         $seccion = $_GET['seccion'] ?? 'unsa';
         require_once __DIR__ . "/../Views/Layout/header.php";
+        echo '<section>'; //me di cuenta que perdi algunos cambios de css por quitarlo
         switch($seccion){
             case 'unsa':
                 require_once __DIR__ . "/../Views/Home/unsa.php";
@@ -66,11 +67,16 @@ class materiacontroller{
             case 'tup':
                 require_once __DIR__ . "/../Views/Home/tup.php";
                 break;
+            case 'matfin':
+                $materias=$this->materiamodel->getAll();
+                require_once __DIR__ . "/../Views/Materias/index.php";
+                break;
             default:
                 echo "<p>Página no encontrada.</p>";
                 break;
         }
-        require_once __DIR__ . "/../views/layouts/footer.php";
+        echo '</section>';
+        require_once __DIR__ . "/../Views/Layout/footer.php";
     }
 
     public function enviarcontacto(){
@@ -81,11 +87,15 @@ class materiacontroller{
             $comentario=trim($_POST['comentario'] ?? "");
 
             if ($nombre === "" || $apellido === "" || $contacto === "" || $comentario === "") {
-                exit("Por favor, complete todos los campos obligatorios.");
+                $_SESSION['mensaje'] = "Por favor, complete todos los campos obligatorios.";
+                header("Location: index.php?seccion=contacto");
+                exit();
             }
 
             if (!filter_var($contacto, FILTER_VALIDATE_EMAIL)) {
-                exit("El formato del email no es valido.");
+                $_SESSION['mensaje'] = "El formato del email no es válido.";
+                header("Location: index.php?seccion=contacto");
+                exit();
             }
             
             
@@ -119,10 +129,12 @@ class materiacontroller{
                 ";
 
                 $mail->send();
-                echo "Mensaje enviado correctamente.";
+                $_SESSION['mensaje']="Mensaje enviado correctamente.";
             } catch (Exception $e){
-                echo "No se pudo enviar el mensaje.";
+                $_SESSION['mensaje']="No se pudo enviar el mensaje.";
             }
+            header("Location: index.php?seccion=contacto");
+            exit();
         }
     }
 }

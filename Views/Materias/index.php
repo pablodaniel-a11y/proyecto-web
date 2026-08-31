@@ -7,7 +7,7 @@
         ya sea Agregar o Eliminar una materia, se realizara la actualizacion en la pagina.
         </p>
     </div>
-    <form action="../Public/index.php?action=guardar" method="post">
+    <form action="../Public/index.php?accion=guardar" method="post">
         <label for="nom_mat"> Nombre de la Materia: </label>
         <input type="text" id="nom_mat" name="nom_mat" placeholder="Ingresar Materia" />
         <br><label for="fech_mat"> Fecha de Curzado: </label>
@@ -56,7 +56,7 @@
                 <td><?php echo htmlspecialchars($row['fecha']); ?></td>
                 <td><?php echo htmlspecialchars($texto_estado); ?></td>
                 <td class="botoness">
-                    <form class="bto_eliminar" action="../Public/index.php?action=eliminar" method="POST" onsubmit="return confirm('Esta seguro de eliminar esta materia?');">
+                    <form class="bto_eliminar" action="../Public/index.php?accion=eliminar" method="POST" onsubmit="return confirm('Esta seguro de eliminar esta materia?');">
                         <input type="hidden" name="id_materia" value="<?php echo (int)$row['id_materia']; ?>">
                         <button type="submit" name="accion" value="Eliminar" class="boton_eliminar">Eliminar</button>
                     </form>
