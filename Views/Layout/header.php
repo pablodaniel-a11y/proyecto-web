@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil personal</title>
     <link rel="stylesheet" href="/proyecto/estiloscss/estiloglobal.css"/>
     <link rel="stylesheet" href="/proyecto/estiloscss/first.css"/>
@@ -15,8 +16,15 @@
 </head>
 <body>
     <header>
-        <h1 id="Titulo">Perfil de Estudiante</h1>
-        <h2>Pablo Calpanchay</h2>
+        <div class="cont-header">
+            <div class="logo-header">
+                <img src="../img/logo.png" class="imglogo">
+            </div>
+            <div class="text-header">
+                <h1 id="Titulo">Perfil de Estudiante</h1>
+                <h2>Pablo Calpanchay</h2>
+            </div>
+        </div>
         <ul>
             <li><a href="index.php?seccion=unsa" class="active"> UNSA </a></li>
             <li class="downopc">

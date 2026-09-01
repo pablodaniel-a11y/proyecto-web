@@ -1,4 +1,4 @@
-<article clase="formulario_tabla">
+<article class="formulario_tabla">
     <h2> Editar Materia </h2>
     <form id="form_edit" action="../Public/index.php?accion=actualizar" method="post">
         <input type="hidden" name="id_materia" value="<?php echo htmlspecialchars($materia['id_materia'] ?? ''); ?>" />
@@ -12,7 +12,10 @@
             <option value="2" <?php echo (isset($materia['id_estado'])&& $materia['id_estado']==2) ? 'selected' : ''; ?>>Libre </option>
             <option value="3" <?php echo (isset($materia['id_estado'])&& $materia['id_estado']==3) ? 'selected' : ''; ?>>Promocionado </option>
         </select>
-        <br><button type="submit">Actualizar Materia</button>
+        <br>
+        <div class="caja_botones">
+        <button type="submit">Actualizar Materia</button>
         <a href="index.php?seccion=matfin" class="boton_cancelar">Cancelar</a>
+        </div>
     </form>
 </article>

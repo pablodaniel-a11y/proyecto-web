@@ -1,8 +1,11 @@
+/* esto es el estilo para el index.php (pero de carpeta Materias)*/
+
 .formulario_tabla {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 0 15px;
 }
 
 
@@ -14,30 +17,54 @@ article.formulario_tabla h2{
 article.formulario_tabla div.contiene_titulo{
     font-family: Century;
     display: flex;
+    flex-wrap: wrap;
     align-items: baseline;
+    justify-content: center;
     gap: 5px;
 }
 
 .formulario_tabla form{
-    padding: 5px;
-    width: 400px;
+    padding: 15px;
+    width: 100%;
+    max-width: 400px;
     border: 2px outset rgb(47, 211, 223);
     background-color: rgb(226, 208, 176, 0.5);
 }
-.formulario_tabla form label,input,button{
+
+.formulario_tabla form label, .formulario_tabla form input, .formulario_tabla form select, .formulario_tabla form button{
+    display: block;
+    width: 100%;
+    max-width: 400px;
     padding: 5px;
     margin: 3px;
 }
 
-article.tabla_fin{
-    margin-top: 15px;
-    padding-left: 10px;
+.tabla_fin{
+    width: 100%;
+    max-width: 900px;
+    margin: 15px auto;
+    padding: 0 10px;
+    overflow-x: auto;
+}
+
+.tabla_fin table{
+    width: 100%;
+    min-width: 600px;
+    table-layout: fixed;
 }
 
 .bto_eliminar{
     margin: 0;
     padding: 0;
-    width: 70px;
+    width: 100%;
+    border: none;
+    background: transparent;
+}
+
+.boton_eliminar {
+    width: 100%;
+    padding: 6px 10px;
+    margin: 0;
 }
 
 .botoness{
@@ -46,8 +73,8 @@ article.tabla_fin{
 }
 
 .botoness .bto_eliminar{
-    display: inline-block;
-    text-align: left;
+    display: block;
+    text-align: center;
 }
 
 .mensaje_exitoso{
@@ -58,5 +85,23 @@ article.tabla_fin{
     margin-top: 10px; 
     margin-bottom: 15px; 
     border: 1px solid #c3d5e6;
-    font-size: 20px;
+    font-size: 18px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* estilo del boton de edit.php */
+
+.boton_cancelar{
+    display: inline-block;
+    text-align: center;
+    padding: 8px;
+    margin: 0;
+    flex: 1;
+
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    border: 2px outset rgb(47, 211, 223);
 }

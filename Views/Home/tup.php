@@ -1,7 +1,8 @@
-<article>
+<article class="textos-tup">
     <h1>Tecnicatura Universitaria en Programación <h1>
     <h2>Título que otorga: Técnico Universitario en Programación<h2>
     <h2>Duración: 3 Años | Cantidad de Materias: 17 <h2>
+    <div class="caja-tablatup">
     <table class="tablatup">
         <thead>
             <tr>
@@ -180,4 +181,5 @@
             </tr>
         </tbody>
     </table>
+    </div>
 </article>

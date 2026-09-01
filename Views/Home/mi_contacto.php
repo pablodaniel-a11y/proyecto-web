@@ -11,8 +11,11 @@
         <input type="text" id="contacto" name="contacto" placeholder="Ingresar contacto" />
         <br><label for="comentario"> Comentario: </label>
         <br><textarea cols="50" rows="10" id="comentario" name="comentario" placeholder="ingresar comentario"></textarea>
-        <br><button type="submit"> Enviar Mensaje</button>
-        <button type="reset"> Borrar Mensaje</button>
+        <br>
+        <div class="caja_botones">
+            <button type="submit"> Enviar Mensaje</button>
+            <button type="reset"> Borrar Mensaje</button>
+        </div>
     </form>
     <?php if (isset($_SESSION['mensaje'])): ?>
         <div class="mensaje_exitoso">

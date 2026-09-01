@@ -18,8 +18,11 @@
             <option value="2">Libre </option>
             <option value="3">Promocionado </option>
         </select>
-        <br><button type="submit" name="accion" value="Agregar"> Guardar Materia </button>
+        <br>
+        <div class="caja_botones">
+        <button type="submit" name="accion" value="Agregar"> Guardar Materia </button>
         <button type="reset"> Borrar Datos</button>
+        </div>
     </form>
         
     <?php if (isset($_SESSION['mensaje'])): ?>
