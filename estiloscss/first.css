@@ -111,6 +111,73 @@ article.art2{
     line-height: 1.6;
 }
 
+/* este de carreras */
+
+
+.carreras-listas{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.columna-carreras{
+    flex: 1;
+    min-width: 280px;
+}
+.columna-carreras h3{
+    text-align: center;
+    border-style: inset;
+    background-color: rgba(127, 255, 212, 0.568);
+    text-shadow: 3px 4px 4px darkturquoise;
+}
+
+.carreras-listas ul li{
+    width: 100%;
+    max-width: 360px;
+    border-style: outset;
+    list-style-type: circle;
+    margin: 2px;
+    padding: 4px;
+    background-color: rgba(95, 158, 160, 0.678);
+
+}
+
+.info-mascotas{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    border-style: double;
+    border-color: rgba(0, 0, 255, 0.473);
+    background-color: rgba(0, 0, 255, 0.075);
+}
+
+.info-mascotas h3, .info-mascotas p {
+    text-align: center;
+}
+
+.imagenes-mascotas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+img.imgsiro1 {
+    width: 100%;
+    max-width: 400px;
+    border-style: outset;
+    border-color: rgba(0, 0, 255, 0.473);
+}
+
+img.imgmini {
+    width: 100%;
+    max-width: 270px;
+    border-style: inset;
+    border-color: rgba(0, 0, 255, 0.473);
+}
+
+
 /* este del perfil basico*/
 
 #pb {
@@ -132,7 +199,7 @@ article.facultad_exact h3 span{
 
 /* aca de mi_contacto.php */
 
-form{
+.articulo_contacto form{
     padding: 15px;
     width: 100%;
     max-width: 400px;
@@ -143,11 +210,15 @@ form{
     text-align: left;
 }
 
-form textarea{
+.articulo_contacto form textarea, .articulo_contacto form input{
     width: 100%;
     padding: 8px;
     margin-top: 5px;
     margin-bottom: 10px;
+}
+
+article.articulo_contacto .mensaje_exitoso{
+    margin: 20px auto;
 }
 
 .caja_botones{

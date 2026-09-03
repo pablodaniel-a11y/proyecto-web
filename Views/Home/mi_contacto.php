@@ -1,8 +1,8 @@
-<article id="cont">
+<article id="cont" class="articulo_contacto">
     <h3> Enviar Mensaje</h3>
     <p> Puedes hablerme en <span>pp159723@gmail.com</span> para comunicarnos </p>
     <br>
-    <form action="../public/index.php?accion=enviarcontacto" method="post">
+    <form id="form-contacto-js" action="../public/index.php?accion=enviarcontacto" method="post">
         <label for="nombre"> Nombre: </label>
         <input type="text" id="nombre" name="nombre" placeholder="Ingresar Nombre" />
         <br><label for="apellido"> Apellido: </label>
@@ -17,6 +17,8 @@
             <button type="reset"> Borrar Mensaje</button>
         </div>
     </form>
+    <div id="mensaje_contacto" class="mensaje_exitoso" style="display: none"></div>
+
     <?php if (isset($_SESSION['mensaje'])): ?>
         <div class="mensaje_exitoso">
             <?php 

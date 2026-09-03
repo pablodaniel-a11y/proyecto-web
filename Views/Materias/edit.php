@@ -18,4 +18,6 @@
         <a href="index.php?seccion=matfin" class="boton_cancelar">Cancelar</a>
         </div>
     </form>
+    <div id="mensaje_editar" class="mensaje_exitoso" style="display: none"></div>
 </article>
+<script src="../archivosjs/validar_editar.js"></script>

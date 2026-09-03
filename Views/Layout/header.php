@@ -18,7 +18,7 @@
     <header>
         <div class="cont-header">
             <div class="logo-header">
-                <img src="../img/logo.png" class="imglogo">
+                <img src="../img/logo.png" alt="logo-blanco-cs_exacta" class="imglogo">
             </div>
             <div class="text-header">
                 <h1 id="Titulo">Perfil de Estudiante</h1>

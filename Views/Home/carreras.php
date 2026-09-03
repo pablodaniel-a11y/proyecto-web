@@ -1,4 +1,5 @@
-<article>
+<article class="carreras-listas">
+    <div class="columna-carreras">
     <h3>Grado</h3>
     <ul>
         <li>Lic. En Analisis de Sistemas </li>
@@ -11,6 +12,9 @@
         <li>Profesorado en Quimica </li>
         <li>Licenciatura en Bromatologia</li>
     </ul>
+    </div>
+
+    <div class="columna-carreras">
     <h3>Pregrado</h3>
     <ul>
         <li>Tecnicatura Universitaria en Programación </li>
@@ -19,6 +23,9 @@
         <li>Tecnicatura Universitaria en Energia Solar </li>
         <li>Analista Quimico </li>
     </ul>
+    </div>
+    
+    <div class="columna-carreras">
     <h3>Posgrado</h3>
     <ul>
         <li>Doctorado en Ciencias - Area Energias Renovables </li>
@@ -27,4 +34,5 @@
         <li>Maestria en Matematica Aplicada </li>
         <li>Especializacion en Energias Renovables </li>
     </ul>
+    </div>
 </article>

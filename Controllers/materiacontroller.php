@@ -14,7 +14,6 @@ class materiacontroller{
     }
 
     public function guardar(){
-        // session_start();
         if($_SERVER["REQUEST_METHOD"] == "POST"){
             $nombre_materia=trim($_POST['nom_mat'] ?? "");
             $fecha=trim($_POST['fech_mat'] ?? "");
@@ -32,7 +31,6 @@ class materiacontroller{
     }
 
     public function eliminar(){
-        // session_start();
         if($_SERVER["REQUEST_METHOD"] == "POST"){
             $id_mat = intval($_POST['id_materia'] ?? 0);
             if($id_mat > 0){
@@ -60,46 +58,6 @@ class materiacontroller{
             header("Location: index.php?seccion=matfin");
             exit();
         }
-    }
-
-    public function secciones(){
-        $seccion = $_GET['seccion'] ?? 'unsa';
-        require_once __DIR__ . "/../Views/Layout/header.php";
-        echo '<section>'; //me di cuenta que perdi algunos cambios de css por quitarlo
-        switch($seccion){
-            case 'unsa':
-                require_once __DIR__ . "/../Views/Home/unsa.php";
-                break;
-            case 'perfil':
-                require_once __DIR__ . "/../Views/Home/perfil.php";
-                break;
-            case 'contacto':
-                require_once __DIR__ . "/../Views/Home/mi_contacto.php";
-                break;
-            case 'fac_exact':
-                require_once __DIR__ . "/../Views/Home/facultad.php";
-                break;
-            case 'carrera':
-                require_once __DIR__ . "/../Views/Home/carreras.php";
-                break;
-            case 'tup':
-                require_once __DIR__ . "/../Views/Home/tup.php";
-                break;
-            case 'matfin':
-                $materias=$this->materiamodel->getAll();
-                require_once __DIR__ . "/../Views/Materias/index.php";
-                break;
-            case 'editar':
-                $id = intval($_GET['id'] ?? 0);
-                $materia=$this->materiamodel->getById($id);
-                require_once __DIR__ . "/../Views/Materias/edit.php";
-                break;
-            default:
-                echo "<p>Página no encontrada.</p>";
-                break;
-        }
-        echo '</section>';
-        require_once __DIR__ . "/../Views/Layout/footer.php";
     }
 
     public function enviarcontacto(){

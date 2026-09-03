@@ -1,5 +1,5 @@
 <article class="art2">
-    <img class="imgunsa" src="../img/UNSa_logo.png">
+    <img class="imgunsa" alt="logo-verde-unsa" src="../img/UNSa_logo.png">
     <p>
         La Universidad Nacional de Salta (UNSa) es una universidad publica argentina de derecho publico,
         <br> autonoma y autarquica, que tiene como fin promover, difundir y preservar la cultura de la comunidad
